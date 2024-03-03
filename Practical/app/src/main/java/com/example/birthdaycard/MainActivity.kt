@@ -30,12 +30,10 @@ class MainActivity : ComponentActivity() {
             BirthdayCardTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
                     GreetingImage(
-                        message = "Happy Birthday Sam!",
-                        from = "From Jibai"
+                        message = "Happy Birthday Sam!", from = "From Jibai"
                     )
                 }
             }
@@ -48,16 +46,11 @@ fun GreetingText(message: String, modifier: Modifier = Modifier, from: String) {
 
     Column(modifier = modifier) {
         Text(
-            text = message,
-            fontSize = 100.sp,
-            lineHeight = 116.sp,
-            textAlign = TextAlign.Center
+            text = message, fontSize = 90.sp, lineHeight = 110.sp, textAlign = TextAlign.Center
         )
 
         Text(
-            text = from,
-            fontSize = 36.sp,
-            lineHeight = 45.sp
+            text = from, fontSize = 36.sp, lineHeight = 45.sp
         )
     }
 
@@ -76,9 +69,7 @@ fun GreetingImage(message: String, modifier: Modifier = Modifier, from: String) 
             alpha = 0.5F
         )
         GreetingText(
-            message = message,
-            from = from,
-            modifier = Modifier
+            message = message, from = from, modifier = Modifier
                 .fillMaxSize()
                 .padding(10.dp)
         )
@@ -88,16 +79,14 @@ fun GreetingImage(message: String, modifier: Modifier = Modifier, from: String) 
 }
 
 @Preview(
-    showBackground = true, backgroundColor = 0xFFE6BDBD, showSystemUi = false,
-    name = "MyPreview"
+    showBackground = true, backgroundColor = 0xFFE6BDBD, showSystemUi = false, name = "MyPreview"
 )
 @Composable
 fun BirthdayCardPreview() {
     BirthdayCardTheme {
 
         GreetingImage(
-            message = "Happy Birthday Sam!",
-            from = "From Emma"
+            message = "Happy Birthday Sam!", from = "From Emma"
         )
     }
 }
