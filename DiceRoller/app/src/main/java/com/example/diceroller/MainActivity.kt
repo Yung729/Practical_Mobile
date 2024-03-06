@@ -20,6 +20,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -42,7 +43,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
-    var result by remember {mutableStateOf(1)}
+    var result by remember {
+        mutableStateOf(1)
+    }
+
     val imageResource = when (result) {
         1 -> R.drawable.dice_1
         2 -> R.drawable.dice_2
@@ -65,7 +69,7 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(showBackground = true, showSystemUi = true)
+@Preview(showBackground = true, showSystemUi = true, backgroundColor = 0xFFFFF9F9)
 @Composable
 fun DiceRollerApp() {
     DiceWithButtonAndImage(
