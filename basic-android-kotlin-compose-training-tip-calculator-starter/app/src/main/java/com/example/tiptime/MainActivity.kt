@@ -110,7 +110,7 @@ fun EditNumberField(value: String, onValueChange: (String) -> Unit, modifier: Mo
 
     TextField(
         value = value,
-        onValueChange = onValueChange ,
+        onValueChange = onValueChange,
         modifier = modifier,
         singleLine = true,
         label = { Text(text = stringResource(id = R.string.bill_amount)) },
