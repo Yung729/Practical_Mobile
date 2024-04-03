@@ -50,7 +50,7 @@ import com.example.cupcake.ui.theme.CupcakeTheme
 fun StartOrderScreen(
     quantityOptions: List<Pair<Int, Int>>,
     modifier: Modifier = Modifier,
-    onNextButtonClick : (Int) -> Unit
+    onNextButtonClick: (Int) -> Unit
 ) {
     Column(
         modifier = modifier,

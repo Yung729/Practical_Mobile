@@ -101,7 +101,7 @@ fun CupcakeApp(
             CupcakeAppBar(
                 currentScreen = currentScreen,
                 canNavigateBack = navController.previousBackStackEntry != null,
-                navigateUp = {  navController.navigateUp()}
+                navigateUp = { navController.navigateUp() }
             )
         }
     ) { innerPadding ->
@@ -164,7 +164,7 @@ fun CupcakeApp(
                 val context = LocalContext.current
 
                 OrderSummaryScreen(
-                        orderUiState = uiState,
+                    orderUiState = uiState,
                     modifier = Modifier.fillMaxHeight(),
                     onCancelButtonClicked = {
                         cancelOrderAndNavigationToStart(
@@ -173,7 +173,7 @@ fun CupcakeApp(
                         )
                     },
                     onSendButtonClicked = { subject: String, summary: String ->
-                        shareOrder(context,subject,summary)
+                        shareOrder(context, subject, summary)
                     }
                 )
             }
