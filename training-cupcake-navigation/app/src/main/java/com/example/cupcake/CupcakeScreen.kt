@@ -190,7 +190,7 @@ private fun cancelOrderAndNavigationToStart(
     viewModel.resetOrder()
     navController.popBackStack(
         CupcakeScreen.Start.name,
-        inclusive = true
+        inclusive = false
     )
 }
 
